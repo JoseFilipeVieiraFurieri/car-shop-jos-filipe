@@ -33,6 +33,10 @@ class CarModel {
   public async carListId(id: string): Promise<ICar | null> {
     return this.model.findById(id);
   }
+
+  public async updateCar(dta: ICar, id: string) {
+    return this.model.findByIdAndUpdate(id, dta);
+  }
 }
 
 export default CarModel;

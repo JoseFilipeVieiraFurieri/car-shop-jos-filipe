@@ -33,6 +33,16 @@ class CarService {
     const data = await this.carModel.carListId(id);
     return this.createCarDomain(data);
   }
+
+  public async updateCar(dta: ICar, id: any) {
+    const data = await this.carModel.updateCar(dta, id);
+    
+    const updatedCar = this.createCarDomain(data);
+
+    console.log(updatedCar);
+    
+    return updatedCar;
+  }
 }
 
 export default CarService;
