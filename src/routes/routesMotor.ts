@@ -14,4 +14,7 @@ routesMotor.post(
   (req, res, next) => Controller.create(req, res, next),
 );
 
+routesMotor.get('/motorcycles', (req, res, next) => Controller.find(req, res, next));
+routesMotor.get('/motorcycles/:id', (req, res, next) => Controller.findId(req, res, next));
+
 export default routesMotor;

@@ -22,6 +22,17 @@ class MotorcycleService {
     const data = await this.MotorModel.create(motor);
     return this.createCarDomain(data);
   }
+
+  public async find() {
+    const data = await this.MotorModel.find();
+    const Motor = data.map((moto: IMotorcycle) => this.createCarDomain(moto));
+    return Motor;
+  }
+
+  public async findId(id: string) {
+    const data = await this.MotorModel.findId(id);
+    return this.createCarDomain(data);
+  }
 }
 
 export default MotorcycleService;

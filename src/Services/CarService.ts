@@ -38,8 +38,6 @@ class CarService {
     const data = await this.carModel.updateCar(dta, id);
     
     const updatedCar = this.createCarDomain(data);
-
-    console.log(updatedCar);
     
     return updatedCar;
   }

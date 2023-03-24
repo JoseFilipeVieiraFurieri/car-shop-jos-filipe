@@ -23,6 +23,14 @@ class MotorcycleModel extends AbstractODM<IMotorcycle> {
   public create(motorcycle: IMotorcycle): Promise<IMotorcycle> {
     return this.model.create({ ...motorcycle });
   }
+
+  public async find(): Promise<IMotorcycle[]> {
+    return this.model.find();
+  }
+
+  public async findId(id: string): Promise<IMotorcycle | null> {
+    return this.model.findById(id);
+  }
 }
 
 export default MotorcycleModel;
