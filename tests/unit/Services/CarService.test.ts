@@ -39,6 +39,27 @@ describe('Testes da camada service Do CarService', function () {
   
     expect(result).to.be.deep.equal(outputCar);
   });
+
+  it('Teste se é listado todos os carros', async function () {
+    const carResponse: ICar[] = [{  
+      id: '6348513f34c397abcad040b2',
+      model: 'Marea',
+      year: 2002,
+      color: 'Black',
+      status: true,
+      buyValue: 15.990,
+      doorsQty: 4,
+      seatsQty: 5 }];
+  
+    sinon.stub(Model, 'find').resolves(carResponse);
+  
+    const model = new CarModel();
+  
+    const service = new CarService(model);
+    const result = await service.carList();
+
+    expect(result).to.be.deep.equal(carResponse);
+  });
   
   it('Teste se é encontrado o carro com id especificado', async function () {
     const carResponse: ICar = {  
@@ -120,7 +141,7 @@ describe('Testes da camada service Do CarService', function () {
     const model = new CarModel();
   
     const service = new CarService(model);
-    const result = await service.updateCar(carInput, carId);
+    const result = await service.update(carInput, carId);
   
     expect(result).to.be.deep.equal(carResponse);
   });
