@@ -16,5 +16,6 @@ routesMotor.post(
 
 routesMotor.get('/motorcycles', (req, res, next) => Controller.find(req, res, next));
 routesMotor.get('/motorcycles/:id', (req, res, next) => Controller.findId(req, res, next));
+routesMotor.put('/motorcycles/:id', (req, res, next) => Controller.update(req, res, next));
 
 export default routesMotor;

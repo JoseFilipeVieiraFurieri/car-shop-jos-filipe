@@ -33,6 +33,11 @@ class MotorcycleService {
     const data = await this.MotorModel.findId(id);
     return this.createCarDomain(data);
   }
+
+  public async Update(dta: IMotorcycle, id: string) {
+    const data = await this.MotorModel.update(dta, id);
+    return this.createCarDomain(data);
+  }
 }
 
 export default MotorcycleService;

@@ -64,7 +64,7 @@ class CarController {
       return res.status(404).json({ message: 'Car not found' });
     }
 
-    await this.Service.updateCar(dataBody, id);
+    await this.Service.update(dataBody, id);
     
     return res.status(200).json({ id, ...dataBody });
   }

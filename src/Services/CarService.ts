@@ -34,8 +34,8 @@ class CarService {
     return this.createCarDomain(data);
   }
 
-  public async updateCar(dta: ICar, id: any) {
-    const data = await this.carModel.updateCar(dta, id);
+  public async update(dta: ICar, id: any) {
+    const data = await this.carModel.update(dta, id);
     
     const updatedCar = this.createCarDomain(data);
     

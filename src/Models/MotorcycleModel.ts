@@ -1,5 +1,4 @@
 import {
-  
   Schema,
 
 } from 'mongoose';
@@ -30,6 +29,9 @@ class MotorcycleModel extends AbstractODM<IMotorcycle> {
 
   public async findId(id: string): Promise<IMotorcycle | null> {
     return this.model.findById(id);
+  }
+  public async update(dta: IMotorcycle, id: string) {
+    return this.model.findByIdAndUpdate(id, dta);
   }
 }
 
