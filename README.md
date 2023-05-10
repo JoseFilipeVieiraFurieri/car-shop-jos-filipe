@@ -1,5 +1,5 @@
 h4 align="center">
-  <img width="180px" alt="trybe wallet logo" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgamerview.uai.com.br%2Freviews%2Fmario-kart-tour-review%2F&psig=AOvVaw3cwO7rJxMMAtdfxIE4uUSd&ust=1683831415705000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCLikif626_4CFQAAAAAdAAAAABAW" />
+  <img width="180px" alt="https://gamerview.uai.com.br/wp-content/uploads/2019/10/Mario_Kart_Tour_bg-1000x600.jpg" />
   <br /><br />
 </h4>
 
